@@ -1,6 +1,4 @@
 ---
-# tasks file for bragalund.deploy_containers
-
     - name: Create Docker volume for homeassistant
       docker_volume:
         name: homeassistant_volume

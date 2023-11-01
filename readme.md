@@ -13,3 +13,6 @@ Using ansible
 ansible-playbook deploy_containers.yml --ask-become
 ```
 
+## TODO
+
+[Install ELK-stack](https://janikvonrotz.ch/2019/10/28/deploy-elk-stack-with-ansible-and-docker/)
