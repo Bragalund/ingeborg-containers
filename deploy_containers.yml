@@ -1,0 +1,9 @@
+---
+- name: Deploy Docker Image to Ubuntu Server
+  hosts: ingeborg
+  become: yes
+  roles:
+    - bragalund.install_docker
+    - bragalund.deploy_containers
+
+

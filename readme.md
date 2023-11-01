@@ -5,11 +5,11 @@ on ingeborg-server.
 
 ## Tech  
 
-Using terraform  
+Using ansible
 
 ## How to run
 
 ```shell
-terraform apply
+ansible-playbook -i hosts deploy_containers.yml --ask-become
 ```
 
