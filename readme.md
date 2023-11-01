@@ -10,6 +10,6 @@ Using ansible
 ## How to run
 
 ```shell
-ansible-playbook -i hosts deploy_containers.yml --ask-become
+ansible-playbook deploy_containers.yml --ask-become
 ```
 
