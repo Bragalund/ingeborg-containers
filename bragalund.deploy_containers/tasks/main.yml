@@ -4,4 +4,4 @@
   import_tasks: deploy_homeassistant.yml
 
 - name: deploy elk
-  import_tasks: deploy_elk.yml
+  import_tasks: deploy_elk_stack.yml
