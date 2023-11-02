@@ -1,0 +1,13 @@
+---
+
+  - name: Download ELK stack Docker Compose file
+    get_url:
+      url: https://example.com/elk-docker-compose.yml
+      dest: /opt/elk-docker-compose.yml
+    tags:
+       - elk
+
+  - name: Start ELK stack containers
+    command: docker-compose -f /opt/elk-docker-compose.yml up -d
+    tags:
+      - elk
