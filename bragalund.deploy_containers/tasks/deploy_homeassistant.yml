@@ -1,0 +1,20 @@
+    - name: Create Docker volume for homeassistant
+      docker_volume:
+        name: homeassistant_volume
+
+    - name: Pull the Docker image
+      docker_image:
+        name: ghcr.io/home-assistant/home-assistant:stable 
+        source: pull
+
+    - name: Run the Docker container
+      docker_container:
+        name: homeassistant
+        image: ghcr.io/home-assistant/home-assistant:stable
+        state: started
+        ports:
+          - "8123:8123"  # Adjust the port mapping as needed
+        volumes:
+          - homeassistant_volume:/homeassistant
+
+ 
