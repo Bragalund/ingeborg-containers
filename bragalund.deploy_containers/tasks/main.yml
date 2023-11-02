@@ -1,21 +1,7 @@
 ---
-    - name: Create Docker volume for homeassistant
-      docker_volume:
-        name: homeassistant_volume
 
-    - name: Pull the Docker image
-      docker_image:
-        name: ghcr.io/home-assistant/home-assistant:stable 
-        source: pull
+- name: deploy homeassistant
+  import_tasks: deploy_homeassistant.yml
 
-    - name: Run the Docker container
-      docker_container:
-        name: homeassistant
-        image: ghcr.io/home-assistant/home-assistant:stable
-        state: started
-        ports:
-          - "8123:8123"  # Adjust the port mapping as needed
-        volumes:
-          - homeassistant_volume:/homeassistant
-
-
+- name: deploy elk
+  import_tasks: deploy_elk.yml
